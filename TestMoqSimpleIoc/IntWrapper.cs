@@ -12,7 +12,7 @@ namespace TestMoqSimpleIoc
     {
         public int GetFromInterface()
         {
-            IGetInteger getInteger = ServLocator.getInteger;
+            IGetInteger getInteger = ServLocator.IGetInteger;
             int r = getInteger.GetInt();
             return r;
         }

@@ -11,7 +11,7 @@ namespace TestMoqSimpleIoc
     {
         public MainWindow()
         {
-            ServLocator.getInteger = new GetInteger();
+            //ServLocator.getInteger = new GetInteger();
             
             InitializeComponent();
         }

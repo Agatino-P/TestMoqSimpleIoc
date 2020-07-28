@@ -18,11 +18,11 @@ namespace TestProject
         [TestMethod]
         public void TestMethod1()
         {
-            Mock<IGetInteger> mockGetInteger = new Mock<IGetInteger>();
-            mockGetInteger.Setup(m => m.GetInt()).Returns(2);
+            Mock<IGetInteger> mockIGetInteger = new Mock<IGetInteger>();
+            mockIGetInteger.Setup(m => m.GetInt()).Returns(2);
 
-            ServLocator.getInteger = mockGetInteger.Object;
-            int j = ServLocator.getInteger.GetInt();
+            ServLocator.IGetInteger = mockIGetInteger.Object;
+
             IntWrapper intWrapper = new IntWrapper();
             int i = intWrapper.GetFromInterface();
             Assert.AreEqual(i, 2);
